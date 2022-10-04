@@ -1,16 +1,13 @@
-# veebank
+## Mobile Banking App built with Flutter & NodeJS.
+Create Account, Login, Transfer, Withdraw, Check Balance, view Transaction History.
 
-A new Flutter project.
+Backend API (built with NodeJS, MongoDB, Express) for this project is available here => https://github.com/ogbodotg/Veegil-Bank-API
 
-## Getting Started
+# Screenshots
+![alt text](https://github.com/ogbodotg/Veegil-Bank-Mobile-App/blob/master/assets/images/1.png?raw=true)
+![alt text](https://github.com/ogbodotg/Veegil-Bank-Mobile-App/blob/master/assets/images/2.png?raw=true)
+![alt text](https://github.com/ogbodotg/Veegil-Bank-Mobile-App/blob/master/assets/images/3.png?raw=true)
+![alt text](https://github.com/ogbodotg/Veegil-Bank-Mobile-App/blob/master/assets/images/4.png?raw=true)
+![alt text](https://github.com/ogbodotg/Veegil-Bank-Mobile-App/blob/master/assets/images/5.png?raw=true)
+![alt text](https://github.com/ogbodotg/Veegil-Bank-Mobile-App/blob/master/assets/images/6.png?raw=true)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
