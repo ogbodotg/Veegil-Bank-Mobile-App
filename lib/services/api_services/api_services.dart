@@ -127,13 +127,13 @@ class APIService {
       'Authorization': 'Bearer ${loginDetails!.data.token}'
     };
 
-    var singleTransactionURL = Config.singleTransactionAPI +
-        "/" +
-        loginDetails.data.phoneNumber.toString();
+    // var singleTransactionURL = Config.singleTransactionAPI +
+    //     "/" +
+    //     loginDetails.data.phoneNumber.toString();
 
     var url = Uri.http(
-      Config.apiURL, singleTransactionURL,
-      // replace singleTransactionURL with Config.transactionAPI to get all transactions
+      Config.apiURL,
+      Config.transactionAPI,
     );
 
     var response = await client.get(url, headers: requestHeaders);

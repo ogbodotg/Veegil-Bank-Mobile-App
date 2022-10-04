@@ -18,6 +18,7 @@ class TransactionItems extends StatelessWidget {
         value: model!.transactionTime,
         currentFormat: "yyyy-MM-ddTHH:mm:ssZ",
         desiredFormat: "yyyy-MM-dd HH:mm:ss");
+
     return Container(
       child: ListTile(
         leading: Container(
@@ -39,7 +40,8 @@ class TransactionItems extends StatelessWidget {
         trailing: Column(
           children: [
             Text(
-              dateTime.toString(),
+              '${model!.transactionTime}',
+              // dateTime.toString(),
               maxLines: 1,
               style: TextStyle(overflow: TextOverflow.ellipsis),
               overflow: TextOverflow.ellipsis,

@@ -3,8 +3,8 @@ import 'dart:convert';
 List<TransactionModel> transactionsFromJson(dynamic str) =>
     List<TransactionModel>.from((str).map((x) => TransactionModel.fromJson(x)));
 
-// TransactionModel transferResponseJson(String str) =>
-//     TransactionModel.fromJson(json.decode(str));
+TransactionModel transferResponseJson(String str) =>
+    TransactionModel.fromJson(json.decode(str));
 
 class TransactionModel {
   late String? id;

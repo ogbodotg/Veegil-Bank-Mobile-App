@@ -42,6 +42,14 @@ class _TransactionsState extends State<Transactions> {
           if (model.hasData) {
             return transactionsList(model.data);
           }
+          if (!model.hasData) {
+            return const Center(child: Text('No transaction'));
+          }
+          if (model.hasError) {
+            return const Center(
+              child: Text('Error loading transactions'),
+            );
+          }
           return const Center(
             child: CircularProgressIndicator(),
           );
