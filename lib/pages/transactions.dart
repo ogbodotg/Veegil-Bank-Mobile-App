@@ -26,7 +26,7 @@ class _TransactionsState extends State<Transactions> {
         context: context,
       ),
       body: SingleChildScrollView(
-          physics: ScrollPhysics(),
+          physics: const ScrollPhysics(),
           scrollDirection: Axis.vertical,
           child: loadTransactions()),
     );

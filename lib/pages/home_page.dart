@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:provider/provider.dart';
 import 'package:veebank/models/auth/login_res_model.dart';
 import 'package:veebank/models/users/user_model.dart';
 import 'package:veebank/pages/transactions.dart';
+import 'package:veebank/provider/account_provider.dart';
 import 'package:veebank/screens/main_page.dart';
 import 'package:veebank/services/api_services/api_services.dart';
 import 'package:veebank/services/api_services/shared_services.dart';
@@ -44,6 +46,14 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     Services _services = Services();
+    final _accountProvider = Provider.of<AccountProvider>(context);
+    _accountProvider.getBalance();
+    int? _balance = 0;
+
+    setState(() {
+      _balance = _accountProvider.accountBalance;
+    });
+
     return Scaffold(
       appBar: _services.appBar(
         title: 'Veegil Bank App',
@@ -86,7 +96,7 @@ class _HomePageState extends State<HomePage> {
                                 _services.sizedBox(w: 10),
                                 Text(
                                     _services.formatPrice(
-                                        amount: balance, context: context),
+                                        amount: _balance, context: context),
                                     textAlign: TextAlign.center,
                                     style: const TextStyle(
                                       fontSize: 24,
@@ -166,6 +176,7 @@ class _HomePageState extends State<HomePage> {
                             balance: balance!,
                           );
                         });
+                    setState(() {});
                   },
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -194,6 +205,8 @@ class _HomePageState extends State<HomePage> {
                             balance: balance!,
                           );
                         });
+
+                    setState(() {});
                   },
                   child: Column(
                     children: const [

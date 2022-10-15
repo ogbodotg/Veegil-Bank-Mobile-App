@@ -17,7 +17,7 @@ class TransactionItems extends StatelessWidget {
     DateTime dateTime = _services.getFormattedDateFromFormattedString(
         value: model!.transactionTime,
         currentFormat: "yyyy-MM-ddTHH:mm:ssZ",
-        desiredFormat: "yyyy-MM-dd HH:mm:ss");
+        desiredFormat: "MM/dd/yyyy hh:mm a");
 
     return Container(
       child: ListTile(
@@ -40,8 +40,7 @@ class TransactionItems extends StatelessWidget {
         trailing: Column(
           children: [
             Text(
-              '${model!.transactionTime}',
-              // dateTime.toString(),
+              dateTime.toString(),
               maxLines: 1,
               style: TextStyle(overflow: TextOverflow.ellipsis),
               overflow: TextOverflow.ellipsis,

@@ -12,15 +12,16 @@ class TransactionModel {
   late String? phoneNumber;
   late String? sender;
   late int? transactionAmount;
-  late DateTime? transactionTime;
+  late dynamic? transactionTime;
 
-  TransactionModel(
-      {this.id,
-      this.transactionType,
-      this.phoneNumber,
-      this.sender,
-      this.transactionAmount,
-      this.transactionTime});
+  TransactionModel({
+    this.id,
+    this.transactionType,
+    this.phoneNumber,
+    this.sender,
+    this.transactionAmount,
+    this.transactionTime,
+  });
 
   TransactionModel.fromJson(Map<String, dynamic> json) {
     id = json["_id"];

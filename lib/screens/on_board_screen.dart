@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:veebank/auth/login.dart';
 import 'package:veebank/screens/main_page.dart';
 import 'package:veebank/utilities/services.dart';
 // import 'package:get_storage/get_storage.dart';
@@ -23,7 +24,7 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
     // store device on click
     // storeDevice.write("onBoard", true);
     await prefs.setBool('onBoard', true);
-    return Navigator.pushReplacementNamed(context, MainScreen.id);
+    return Navigator.pushReplacementNamed(context, LoginScreen.id);
   }
 
   @override

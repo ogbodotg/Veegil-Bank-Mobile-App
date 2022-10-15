@@ -153,7 +153,7 @@ class Services {
     DateTime? dateTime = DateTime.now();
     if (value != null || value.isNotEmpty) {
       try {
-        dateTime = DateFormat(currentFormat).parse(value, isUtc).toLocal();
+        dateTime = DateFormat.yMMMd(desiredFormat).parse(value, isUtc);
       } catch (e) {
         print("$e");
       }

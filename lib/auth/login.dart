@@ -151,7 +151,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                     width: 2),
                               ),
                               focusColor: Theme.of(context).primaryColor,
-                            )),
+                            ),),
                       ),
                       _services.sizedBox(h: 2),
                       Row(
